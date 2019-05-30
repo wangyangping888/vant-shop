@@ -1,7 +1,7 @@
 <template>
 	
-	<van-tabbar v-model="active">
-	  <van-tabbar-item v-for="(item,index) in nav"  :to="item.url" :key="index" >
+	<van-tabbar :value="active">
+	  <van-tabbar-item v-for="(item,index) in nav"  :to="item.url" >
 	    <img
 	      slot="icon"
 	      slot-scope="props"
@@ -17,7 +17,7 @@
 	export default{
 		data(){
 			return {
-				active:0,
+				
 				nav: [{
 						url: "/",
 						icon: require('@/assets/icons/home.png'),
@@ -45,6 +45,10 @@
 					},
 				]
 			};
+		},props:{
+			active:{
+				default:0
+			}
 		}
 	}
 	

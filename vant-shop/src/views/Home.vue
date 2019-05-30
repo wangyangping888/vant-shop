@@ -10,7 +10,7 @@
 			</van-swipe-item>
 		</van-swipe>
 
-		<tab-bar></tab-bar>
+		<tab-bar :active='0'></tab-bar>
 	</div>
 </template>
 
